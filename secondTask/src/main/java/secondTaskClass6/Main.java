@@ -10,4 +10,16 @@ ordenado inversamente por apellido.
 
 
 public class Main {
+    public static void main(String[] args) {
+
+    Person personOne = new Person();
+    Person personTwo = new Person();
+    Person personThree = new Person();
+    Person personFour = new Person();
+
+
+    System.out.println(personOne);
+    System.out.println(personTwo);
+    }
+
 }

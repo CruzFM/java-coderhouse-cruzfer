@@ -19,11 +19,12 @@ public class Person {
 
 
     public Person() {
-        this.name = ;
+        this.name = getRandomItem(names);
+        this.lastname = getRandomItem(lastnames);
     }
 
     private String getRandomItem (String[] list){
-        int randomIndex = (int) Math.round(Math.random() * list.length - 1);
+        int randomIndex = (int) Math.round(Math.random() * (list.length - 1) );
         return list[randomIndex];
     }
 
