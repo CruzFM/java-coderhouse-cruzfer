@@ -1,5 +1,7 @@
 package secondTaskClass6;
 
+import java.util.ArrayList;
+
 public class Person {
     private String name;
 
@@ -28,6 +30,21 @@ public class Person {
         return list[randomIndex];
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+    public String getLastname(){
+        return lastname;
+    }
+
+    public void setLastname(String lastname) {
+        this.lastname = lastname;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -42,5 +59,15 @@ public class Person {
         int result = name.hashCode();
         result = 31 * result + lastname.hashCode();
         return result;
+    }
+
+    public static ArrayList<Person> sortPersons (ArrayList<Person> list, String sortBy){
+        switch (sortBy) {
+            case "name" -> list.sort((o1, o2) -> o1.getName().compareTo(o2.getName() ));
+            case "lastname" -> list.sort((o1, o2) -> o1.getLastname().compareTo(o2.getLastname()));
+            default ->{
+            }
+        }
+        return list;
     }
 }
