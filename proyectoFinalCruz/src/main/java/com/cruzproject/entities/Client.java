@@ -1,5 +1,8 @@
 package com.cruzproject.entities;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Client {
 
     //characteristics
@@ -15,6 +18,8 @@ public class Client {
         this.lastname = lastname;
         this.dni = dni;
     }
+
+    private List<Product> products;
 
     //Getters and setters
 
@@ -41,5 +46,22 @@ public class Client {
     }
     public void setDni(String dni){
         this.dni = dni;
+    }
+
+    public void addProduct(Product product) {
+        if(product == null){
+            products = new ArrayList<>();
+        }
+        products.add(product);
+    }
+    public void removeProduct(Product product){
+        if(products != null){
+            products.remove(product);
+        }
+        products.remove(products);
+    }
+
+    public List<Product> getProducts(){
+        return products;
     }
 }
