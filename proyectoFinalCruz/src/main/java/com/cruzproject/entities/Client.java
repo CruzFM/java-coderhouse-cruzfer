@@ -9,10 +9,10 @@ public class Client {
     private int id;
     private String name;
     private String lastname;
-    private String dni;
+    private int dni;
 
     //Constructor
-    public Client (int id, String name, String lastname, String dni){
+    public Client (int id, String name, String lastname, int dni){
         this.id = id;
         this.name = name;
         this.lastname = lastname;
@@ -41,10 +41,10 @@ public class Client {
     public void setLastName(String lastname){
         this.lastname = lastname;
     }
-    public String getDni(){
+    public int getDni(){
         return dni;
     }
-    public void setDni(String dni){
+    public void setDni(int dni){
         this.dni = dni;
     }
 
